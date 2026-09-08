@@ -128,9 +128,10 @@ textarea {
     inset: 0;
     z-index: 0;
     background-image: var(--hero-photo);
-    background-size: cover;
-    background-position: center 28%;
-    transform: scale(1.01);
+    background-size: auto 118%;
+    background-position: right center;
+    background-repeat: no-repeat;
+    transform: none;
 }
 
 .hero-overlay {
@@ -922,5 +923,1032 @@ footer {
 
     .hero-meta {
         font-size: .62rem;
+    }
+}
+
+/* DESKTOP HERO PHOTO FIX */
+@media (min-width: 901px) {
+    .hero {
+        min-height: 100vh;
+        background: #050d17;
+    }
+
+    .hero-photo {
+        left: 42%;
+        background-size: auto 118%;
+        background-position: right center;
+        background-repeat: no-repeat;
+    }
+
+    .hero-overlay {
+        background:
+            linear-gradient(90deg,
+                rgba(4,10,19,1) 0%,
+                rgba(4,10,19,.98) 18%,
+                rgba(4,10,19,.88) 40%,
+                rgba(4,10,19,.45) 65%,
+                rgba(4,10,19,.25) 100%),
+            linear-gradient(0deg,
+                rgba(4,10,19,.70),
+                transparent 40%,
+                rgba(4,10,19,.28));
+    }
+
+    .hero-content {
+        max-width: 680px;
+    }
+}
+
+/* PHONE HERO PHOTO */
+@media (max-width: 700px) {
+    .hero-photo {
+        left: 0;
+        background-size: cover;
+        background-position: center 25%;
+    }
+}
+
+/* =====================================================
+   CENTERED RESPONSIVE LAYOUT — FINAL OVERRIDES
+   ===================================================== */
+html, body {
+    width: 100%;
+    max-width: 100%;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.container {
+    width: min(92%, 1180px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* CENTERED NAVIGATION */
+.navbar {
+    position: relative;
+    justify-content: center;
+}
+
+.logo {
+    position: absolute;
+    left: 0;
+}
+
+.nav-links {
+    justify-content: center;
+    align-items: center;
+}
+
+/* CENTERED HERO */
+.hero {
+    min-height: 100svh;
+    text-align: center;
+}
+
+.hero-photo {
+    left: 0 !important;
+    right: 0 !important;
+    background-size: cover !important;
+    background-position: center 18% !important;
+}
+
+.hero-overlay {
+    background:
+        linear-gradient(180deg, rgba(4,10,19,.68) 0%, rgba(4,10,19,.54) 35%, rgba(4,10,19,.78) 100%),
+        linear-gradient(90deg, rgba(4,10,19,.58), rgba(4,10,19,.28), rgba(4,10,19,.58));
+}
+
+.hero-content {
+    width: min(92%, 900px);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 90px;
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-badge,
+.hero-actions,
+.hero-meta {
+    justify-content: center;
+}
+
+.hero-text {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 720px;
+}
+
+.hero-actions {
+    align-items: center;
+}
+
+.hero-meta {
+    flex-wrap: wrap;
+}
+
+/* CENTER SECTION HEADINGS */
+.section-heading {
+    justify-content: center;
+    text-align: center;
+}
+
+.section-heading > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* BALANCED CENTERED CONTENT */
+.about-grid,
+.skills-layout,
+.contact-box {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.about-cards {
+    max-width: 900px;
+    margin: 10px auto 0;
+}
+
+.skills-layout {
+    max-width: 1050px;
+}
+
+.skill-summary {
+    text-align: center;
+}
+
+.skill-summary h3,
+.skill-summary > p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.certificate {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.skills-list {
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.projects-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.project-card {
+    text-align: center;
+}
+
+.project-top {
+    text-align: left;
+}
+
+.tags {
+    justify-content: center;
+}
+
+.timeline {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-box {
+    max-width: 1100px;
+}
+
+.contact-copy {
+    text-align: center;
+}
+
+.contact-details a {
+    text-align: center;
+}
+
+/* LARGE DESKTOP */
+@media (min-width: 1200px) {
+    .container {
+        width: min(90%, 1180px);
+    }
+
+    .hero-content {
+        max-width: 950px;
+    }
+
+    .hero h1 {
+        font-size: clamp(5rem, 7vw, 7rem);
+    }
+}
+
+/* TABLET / SMALL LAPTOP */
+@media (max-width: 900px) {
+    .navbar {
+        justify-content: center;
+    }
+
+    .nav-links {
+        justify-content: center;
+    }
+
+    .about-grid,
+    .skills-layout,
+    .contact-box {
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 820px;
+    }
+}
+
+/* PHONE */
+@media (max-width: 700px) {
+    .navbar {
+        min-height: 68px;
+    }
+
+    .logo {
+        left: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 0;
+    }
+
+    .nav-links {
+        top: 68px;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+
+    .nav-links li a {
+        text-align: center;
+    }
+
+    .hero {
+        min-height: 100svh;
+    }
+
+    .hero-photo {
+        background-size: cover !important;
+        background-position: center 18% !important;
+    }
+
+    .hero-overlay {
+        background:
+            linear-gradient(180deg, rgba(4,10,19,.48) 0%, rgba(4,10,19,.62) 42%, rgba(4,10,19,.94) 100%);
+    }
+
+    .hero-content {
+        width: min(92%, 600px);
+        padding-top: 105px;
+        padding-bottom: 55px;
+    }
+
+    .hero h1 {
+        font-size: clamp(3.4rem, 17vw, 5.2rem);
+        text-align: center;
+    }
+
+    .hero h2 {
+        text-align: center;
+    }
+
+    .hero-actions {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .btn {
+        width: min(100%, 320px);
+    }
+
+    .hero-meta {
+        text-align: center;
+    }
+
+    .section-heading {
+        gap: 12px;
+    }
+
+    .section-number {
+        display: none;
+    }
+
+    .about-intro,
+    .skill-summary,
+    .project-card,
+    .contact-copy {
+        text-align: center;
+    }
+
+    .certificate {
+        text-align: left;
+    }
+}
+
+/* =====================================================
+   TRUE CENTERED SITE — ALL SECTIONS
+   ===================================================== */
+
+/* Keep every major block visually centered */
+main,
+section,
+.section > .container,
+.site-header .container,
+footer .container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* NAVIGATION */
+.navbar {
+    justify-content: center !important;
+}
+
+.nav-links {
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    left: 0;
+}
+
+/* ABOUT — centered columns and text */
+.about-grid {
+    width: min(100%, 1050px);
+    margin: 0 auto;
+    align-items: start;
+    text-align: center;
+}
+
+.about-intro,
+.about-intro p,
+.about-intro .lead,
+.about-intro .text-link {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-cards {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.info-card {
+    text-align: center;
+}
+
+/* SKILLS — centered entire layout */
+.skills-layout {
+    width: min(100%, 1050px);
+    margin: 0 auto;
+    align-items: start;
+    text-align: center;
+}
+
+.skill-summary,
+.skill-summary h3,
+.skill-summary > p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.certificate {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    justify-content: center;
+}
+
+.skills-list {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skill-group,
+.skill-group h3 {
+    text-align: center;
+}
+
+.skill-row > div {
+    text-align: left;
+}
+
+/* PROJECTS */
+.projects-grid {
+    width: min(100%, 1080px);
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.project-card,
+.project-card h3,
+.project-card p {
+    text-align: center;
+}
+
+.project-top {
+    text-align: left;
+}
+
+.tags {
+    justify-content: center;
+}
+
+/* EXPERIENCE — centered timeline block and content */
+.timeline {
+    width: min(100%, 850px);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.timeline-content,
+.timeline-content h3,
+.timeline-content p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* CONTACT — centered box and centered contents */
+.contact-box {
+    width: min(100%, 1050px);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-copy,
+.contact-copy h2,
+.contact-copy > p,
+.contact-details,
+.contact-details a {
+    text-align: center;
+}
+
+.contact-form-wrap {
+    text-align: center;
+}
+
+.contact-form-wrap form {
+    width: min(100%, 560px);
+    margin: 0 auto;
+}
+
+form label,
+form label > span {
+    text-align: center;
+}
+
+.quick-links {
+    justify-content: center;
+}
+
+/* FOOTER */
+.footer-inner {
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+    .about-grid,
+    .skills-layout,
+    .contact-box {
+        width: min(100%, 760px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .about-grid,
+    .skills-layout,
+    .contact-box {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-list {
+        width: min(100%, 700px);
+    }
+
+    .projects-grid {
+        width: min(100%, 720px);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .project-card:last-child {
+        grid-column: 1 / -1;
+        width: min(100%, 350px);
+        justify-self: center;
+    }
+
+    .contact-form-wrap {
+        border-left: 0;
+        border-top: 1px solid var(--line);
+    }
+}
+
+/* PHONE */
+@media (max-width: 700px) {
+    .container {
+        width: min(92%, 600px);
+    }
+
+    .navbar {
+        width: min(92%, 600px);
+    }
+
+    .logo {
+        left: 0;
+    }
+
+    .nav-links {
+        width: 100%;
+        left: 0;
+        right: 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    .about-grid,
+    .skills-layout,
+    .projects-grid,
+    .contact-box,
+    .timeline {
+        width: 100%;
+    }
+
+    .about-cards,
+    .skills-list,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card,
+    .project-card:last-child {
+        width: 100%;
+        justify-self: stretch;
+        grid-column: auto;
+    }
+
+    .contact-copy,
+    .contact-form-wrap {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .timeline {
+        padding-left: 35px;
+        padding-right: 10px;
+        text-align: center;
+    }
+
+    .timeline-content,
+    .timeline-content h3,
+    .timeline-content p {
+        text-align: center;
+    }
+}
+
+/* =====================================================
+   PROFESSIONAL SKILLS + PROJECTS POLISH
+   ===================================================== */
+.professional-skills {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 24px !important;
+    width: 100%;
+    max-width: 1050px !important;
+    margin: 0 auto !important;
+}
+
+.professional-skills .skill-group {
+    max-width: none !important;
+    min-height: 220px;
+    padding: 28px 24px;
+    border: 1px solid rgba(255,255,255,.09);
+    border-radius: 18px;
+    background: rgba(255,255,255,.035);
+    box-shadow: 0 14px 35px rgba(0,0,0,.18);
+    transition: transform .25s ease, border-color .25s ease, background .25s ease;
+}
+
+.professional-skills .skill-group:hover {
+    transform: translateY(-6px);
+    border-color: rgba(0, 220, 255, .35);
+    background: rgba(255,255,255,.055);
+}
+
+.skill-card-icon {
+    font-size: 30px;
+    margin-bottom: 14px;
+}
+
+.professional-skills .skill-group h3 {
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.professional-skills .skill-group p {
+    margin: 0 auto;
+    max-width: 290px;
+    line-height: 1.75;
+    color: rgba(255,255,255,.72);
+    text-align: center;
+    font-size: .94rem;
+}
+
+/* Make the hero background photo easier to see without losing contrast */
+.hero-photo {
+    opacity: .92 !important;
+    filter: brightness(1.28) contrast(1.02) saturate(1.04) !important;
+}
+
+.hero-overlay {
+    opacity: .62 !important;
+    background: linear-gradient(90deg, rgba(4,12,24,.82) 0%, rgba(4,12,24,.52) 42%, rgba(4,12,24,.18) 78%, rgba(4,12,24,.10) 100%) !important;
+}
+
+.projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+    .professional-skills { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+    .projects-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 700px) {
+    .professional-skills { grid-template-columns: 1fr !important; }
+    .professional-skills .skill-group { min-height: auto; }
+    .hero-photo { opacity: .95 !important; }
+    .hero-overlay { background: linear-gradient(180deg, rgba(4,12,24,.40), rgba(4,12,24,.30) 45%, rgba(4,12,24,.72)) !important; }
+}
+/* =====================================================
+   COMPLETE ABOUT SECTION — CENTER EVERYTHING
+   ===================================================== */
+
+   #about {
+    width: 100%;
+    text-align: center;
+}
+
+#about .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+/* About heading */
+#about .section-heading {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Heading title */
+#about .section-heading h2 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Everything inside About */
+#about .about-grid {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* About introduction */
+#about .about-intro {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#about .about-intro h3,
+#about .about-intro p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Link/button */
+#about .text-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* About cards */
+#about .about-cards {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    gap: 25px;
+    justify-items: center;
+}
+
+/* Individual cards */
+#about .info-card {
+    width: 100%;
+    max-width: 430px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Card content */
+#about .info-card h3,
+#about .info-card p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Card icons */
+#about .info-card .icon,
+#about .info-card i {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+
+    #about .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    #about .about-grid {
+        width: 100%;
+    }
+
+    #about .about-intro {
+        max-width: 100%;
+    }
+
+    #about .about-cards {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        width: 100%;
+    }
+
+    #about .info-card {
+        max-width: 100%;
+    }
+}
+/* =====================================================
+   ABOUT + SKILLS & EXPERTISE — FULL CENTER ALIGNMENT
+   ===================================================== */
+
+/* ---------- ABOUT SECTION ---------- */
+
+#about {
+    width: 100%;
+    text-align: center;
+}
+
+#about .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#about .section-heading {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto 40px;
+}
+
+#about .about-grid {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#about .about-intro {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#about .about-intro p {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#about .text-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about .about-cards {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    gap: 25px;
+    justify-items: center;
+}
+
+#about .info-card {
+    width: 100%;
+    max-width: 430px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+/* ---------- SKILLS & EXPERTISE ---------- */
+
+#skills {
+    width: 100%;
+    text-align: center;
+}
+
+#skills .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#skills .section-heading {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto 40px;
+}
+
+#skills .skills-layout {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#skills .skill-summary {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+#skills .skill-summary h3,
+#skills .skill-summary p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#skills .certificate {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    text-align: center;
+}
+
+
+/* Skill cards */
+
+#skills .professional-skills {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    justify-items: center;
+    align-items: stretch;
+}
+
+#skills .skill-group {
+    width: 100%;
+    max-width: 330px;
+    min-height: 220px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#skills .skill-group h3 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#skills .skill-group p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ---------- TABLET ---------- */
+
+@media (max-width: 900px) {
+
+    #skills .professional-skills {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        max-width: 720px;
+    }
+
+    #about .about-cards {
+        max-width: 700px;
+    }
+}
+
+
+/* ---------- PHONE ---------- */
+
+@media (max-width: 700px) {
+
+    #about .container,
+    #skills .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    #about .about-cards {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+
+    #about .info-card {
+        max-width: 100%;
+    }
+
+    #skills .professional-skills {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+
+    #skills .skill-group {
+        max-width: 100%;
+        min-height: auto;
     }
 }
